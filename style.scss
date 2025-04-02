@@ -1,0 +1,81 @@
+@import './styles/colours';
+
+* {
+  font-family: JetBrainsMono Nerd Font, Iosevka Nerd Font, Noto Sans Mono CJK JP;
+  font-size: 17px;
+}
+
+window {
+  &#waybar {
+    color: $COL_FOREGROUND;
+    background-color: $COL_FOREGROUND_INV;
+    // background-color: $COL_BLACK_L;
+    border: none;
+    &.hidden {
+      opacity: 0.1;
+    }
+  }
+}
+
+#clock,
+#cpu,
+#custom-ibus,
+#custom-launcher,
+#custom-lock,
+#custom-media,
+#custom-powermenu,
+#idle_inhibitor,
+#mode,
+#tray,
+#window,
+#workspaces,
+#workspaces {
+  background-color: transparent;
+  color: $COL_FOREGROUND;
+  border: none;
+}
+
+@keyframes button_activate {
+	from { opacity: 0.3 }
+	to { opacity: 1.0; }
+}
+
+#workspaces button {
+  color: $COL_FOREGROUND;
+  background: transparent; // background-color does NOT override gtk highlighting
+  border: none;
+  transition: all 0.3s ease-in-out;
+
+  &.active {
+    color: $COL_BLACK_L;
+    background: $COL_FOREGROUND;
+    animation: button_activate 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background: rgba($COL_FOREGROUND, 0.7);
+    }
+  }
+  &.urgent {
+    color: $COL_BLACK_L;
+    background: $COL_RED_L;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background: rgba($COL_RED_L, 0.7);
+    }
+  }
+  &:hover {
+    background: rgba($COL_FOREGROUND, 0.3);
+  }
+}
+
+tooltip {
+  padding: 15px;
+  background-color: $COL_BACKGROUND;
+  border-color: $COL_WHITE_N;
+  label {
+    color: $COL_FOREGROUND;
+    &:focus {
+      background-color: inherit;
+    }
+  }
+}

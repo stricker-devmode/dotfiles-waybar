@@ -1,0 +1,87 @@
+* {
+  font-family: JetBrainsMono Nerd Font, Iosevka Nerd Font, Noto Sans Mono CJK JP;
+  font-size: 17px;
+}
+
+window#waybar {
+  color: #dcd8c0;
+  background-color: #2e2824;
+  border: none;
+}
+
+window#waybar.hidden {
+  opacity: 0.1;
+}
+
+#clock,
+#cpu,
+#custom-ibus,
+#custom-launcher,
+#custom-lock,
+#custom-media,
+#custom-powermenu,
+#idle_inhibitor,
+#mode,
+#tray,
+#window,
+#workspaces,
+#workspaces {
+  background-color: transparent;
+  color: #dcd8c0;
+  border: none;
+}
+
+@keyframes button_activate {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1.0;
+  }
+}
+
+#workspaces button {
+  color: #dcd8c0;
+  background: transparent;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+  color: #625f50;
+  background: #dcd8c0;
+  animation: button_activate 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active:hover {
+  background: rgba(220, 216, 192, 0.7);
+}
+
+#workspaces button.urgent {
+  color: #625f50;
+  background: #f76e6e;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.urgent:hover {
+  background: rgba(247, 110, 110, 0.7);
+}
+
+#workspaces button:hover {
+  background: rgba(220, 216, 192, 0.3);
+}
+
+tooltip {
+  padding: 15px;
+  background-color: #171412;
+  border-color: #d4d4c4;
+}
+
+tooltip label {
+  color: #dcd8c0;
+}
+
+tooltip label:focus {
+  background-color: inherit;
+}
