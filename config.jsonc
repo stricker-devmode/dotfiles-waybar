@@ -4,7 +4,7 @@
     "height": 30,
     "spacing": 4,
     "margin-bottom": 5,
-    "modules-left": ["hyprland/workspaces","cpu","memory"],
+    "modules-left": ["hyprland/workspaces","cpu","temperature#cpu","custom/gpu","temperature#gpu","memory"],
     "modules-center": ["clock"],
     "modules-right": ["tray","bluetooth","network","wireplumber","backlight","upower","custom/powermenu"],
 
@@ -35,13 +35,30 @@
     },
     "memory": {
         "interval": 1,
-        "format": "󰝪 {}% ",
+        "format": "󰞰 {}% ",
         "max-length": 10
     },
     "cpu": {
         "interval": 1,
-        "format": "󰄧 {}% ",
+        "format": "󰝪 {}% ",
         "max-length": 10
+    },
+    "temperature#cpu": {
+        "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+        "interval": 1,
+        "format": "󰏈 {temperatureC}󰔄 "
+    },
+    "custom/gpu": {
+        "exec": "cat /sys/devices/pci0000:00/0000:00:01.1/0000:01:00.0/0000:02:00.0/0000:03:00.0/gpu_busy_percent",
+        "interval": 1,
+        "format": "󰄧 {}% ",
+        "tooltip-format": "{}%",
+        "max-length": 10
+    },
+    "temperature#gpu": {
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "interval": 1,
+        "format": "󰿸 {temperatureC}󰔄 "
     },
     "tray": {
         // "icon-size": 21,
