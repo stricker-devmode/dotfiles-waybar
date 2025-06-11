@@ -94,11 +94,11 @@
         "nospacing": 1,
     },
     "bluetooth": {
-	    "format": "󰂯 {status}",
+        "format": "󰂯 {status}",
         "format-disabled": " 󰂲 ",
         "format-off": " 󰂲 ",
         "format-on": " 󰂯 ",
-	    "format-connected": " 󰂱 ",
+        "format-connected": " 󰂱 ",
         "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
         "tooltip-format-connected": "{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
