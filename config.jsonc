@@ -31,7 +31,7 @@
             "G5": "󰎰",
             "G6": "󰎵",
             "default": ""
-        },
+        }
     },
     "memory": {
         "interval": 1,
@@ -80,7 +80,7 @@
                 "weekdays":   "<span color='#81a1c1'><b>{}</b></span>",
                 "today":      "<span color='#88c0d0'><b>{}</b></span>"
                 }
-        },
+        }
     },
     "network": {
         "interval": 5,
@@ -91,7 +91,7 @@
         "tooltip-format-wifi": "󰕒 {bandwidthUpBits}\t󰇚 {bandwidthDownBits}\n󱦂 {ipaddr}/{cidr}\n󰑩 {gwaddr}\n󰀃 {essid}\n󰹤 {signalStrength}% @ {signaldBm}dBm\n󱘖 {ifname}",
         "tooltip-format-ethernet": "󰕒 {bandwidthUpBits}\t󰇚 {bandwidthDownBits}\n󱦂 {ipaddr}/{cidr}\n󱂇 {gwaddr}\n󱘖 {ifname}",
         "tooltip-format-disconnected": "No Internet Connection",
-        "nospacing": 1,
+        "nospacing": 1
     },
     "bluetooth": {
         "format": "󰂯 {status}",
